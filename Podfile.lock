@@ -1,0 +1,38 @@
+PODS:
+  - AVOSCloud (2.6.6)
+  - EstimoteSDK (2.1.5)
+  - FMDB (2.3):
+    - FMDB/standard (= 2.3)
+  - FMDB/common (2.3)
+  - FMDB/standard (2.3):
+    - FMDB/common
+  - GRMustache (6.8.3):
+    - JRSwizzle (~> 1.0)
+  - JRSwizzle (1.0)
+  - Mapbox-iOS-SDK (1.4.1):
+    - FMDB (= 2.3)
+    - GRMustache (= 6.8.3)
+    - SMCalloutView (= 2.0)
+  - SMCalloutView (2.0)
+  - ZXingObjC (3.0.3):
+    - ZXingObjC/All (= 3.0.3)
+  - ZXingObjC/All (3.0.3)
+
+DEPENDENCIES:
+  - AVOSCloud (= 2.6.6)
+  - EstimoteSDK (= 2.1.5)
+  - FMDB (= 2.3)
+  - Mapbox-iOS-SDK (= 1.4.1)
+  - ZXingObjC (= 3.0.3)
+
+SPEC CHECKSUMS:
+  AVOSCloud: 64b6fcd3bba5b8009aae9bcd3150431b02f16555
+  EstimoteSDK: 1a8184137ab16615b982efd0804aa711a0262ce7
+  FMDB: 31ec26773c7f7b7890a6038235a1f2bbd933a7cb
+  GRMustache: ab96109b7ba4b9568425bea40d6cd2cdc7582b6c
+  JRSwizzle: 30da7a2c539a4ebf954b16d15f6dd8221c9f6fa5
+  Mapbox-iOS-SDK: f3c46afe1af0d8ea7863b33ba9e96d94606d4784
+  SMCalloutView: c1906604d47c058400ade5c9d52ab98aa77b7e76
+  ZXingObjC: 1eebdf4334b7de660ae42ddd23bd97b6d777b07d
+
+COCOAPODS: 0.35.0

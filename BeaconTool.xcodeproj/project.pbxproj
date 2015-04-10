@@ -7,12 +7,65 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48F4D0A22A08EB5DCAED2B03 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E62CA724F4CDDCC73CFFF58 /* libPods.a */; };
+		D96ECE3C1A32DA5200BF9677 /* BTTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96ECE3B1A32DA5200BF9677 /* BTTabbarController.swift */; };
 		D9A5FAE01A31B2A4002FAA64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A5FADF1A31B2A4002FAA64 /* AppDelegate.swift */; };
-		D9A5FAE21A31B2A4002FAA64 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A5FAE11A31B2A4002FAA64 /* ViewController.swift */; };
-		D9A5FAE51A31B2A4002FAA64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9A5FAE31A31B2A4002FAA64 /* Main.storyboard */; };
+		D9A5FAE21A31B2A4002FAA64 /* BTMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A5FAE11A31B2A4002FAA64 /* BTMapViewController.swift */; };
 		D9A5FAE71A31B2A4002FAA64 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9A5FAE61A31B2A4002FAA64 /* Images.xcassets */; };
-		D9A5FAEA1A31B2A4002FAA64 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9A5FAE81A31B2A4002FAA64 /* LaunchScreen.xib */; };
 		D9A5FAF61A31B2A4002FAA64 /* BeaconToolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A5FAF51A31B2A4002FAA64 /* BeaconToolTests.swift */; };
+		D9A5FB001A31B354002FAA64 /* BTDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A5FAFF1A31B354002FAA64 /* BTDataModel.swift */; };
+		D9B2234B1A4D06AC00B17F00 /* BTDataBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B2234A1A4D06AB00B17F00 /* BTDataBaseViewController.swift */; };
+		D9C94C0D1A356AF300100A3E /* BTSwitchMallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C94C0C1A356AF300100A3E /* BTSwitchMallView.swift */; };
+		D9C94C0F1A35A18300100A3E /* beaconDB in Resources */ = {isa = PBXBuildFile; fileRef = D9C94C0E1A35A18300100A3E /* beaconDB */; };
+		D9C94C121A36E35000100A3E /* home_bg1136.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D9C94C111A36E35000100A3E /* home_bg1136.jpg */; };
+		D9C94C141A36E82600100A3E /* home_bg960.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D9C94C131A36E82600100A3E /* home_bg960.jpg */; };
+		D9C94C161A38309600100A3E /* BTAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C94C151A38309600100A3E /* BTAnnotation.swift */; };
+		D9CA306D1A331CB9007213C4 /* BTSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CA306C1A331CB9007213C4 /* BTSettingViewController.swift */; };
+		D9CAE85B1A52A7CC0053E758 /* bg_inner.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D9CAE85A1A52A7CC0053E758 /* bg_inner.jpg */; };
+		D9CFED641A58F549001D7100 /* BTQrViewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CFED631A58F549001D7100 /* BTQrViewcontroller.swift */; };
+		D9EE3E171AC26B3300EBD1DB /* N_COCOPARK_B1.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = D9EE3DED1AC26B3300EBD1DB /* N_COCOPARK_B1.mbtiles */; };
+		D9EE3E181AC26B3300EBD1DB /* N_COCOPARK_L1.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = D9EE3DEE1AC26B3300EBD1DB /* N_COCOPARK_L1.mbtiles */; };
+		D9EE3E191AC26B3300EBD1DB /* N_COCOPARK_L2.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = D9EE3DEF1AC26B3300EBD1DB /* N_COCOPARK_L2.mbtiles */; };
+		D9EE3E1A1AC26B3300EBD1DB /* N_COCOPARK_L3.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = D9EE3DF01AC26B3300EBD1DB /* N_COCOPARK_L3.mbtiles */; };
+		D9EE3E1B1AC26B3300EBD1DB /* N_HAIANCHENG_EASTL1.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = D9EE3DF11AC26B3300EBD1DB /* N_HAIANCHENG_EASTL1.mbtiles */; };
+		D9EE3E1C1AC26B3300EBD1DB /* N_HAIANCHENG_EASTL2.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = D9EE3DF21AC26B3300EBD1DB /* N_HAIANCHENG_EASTL2.mbtiles */; };
+		D9EE3E1D1AC26B3300EBD1DB /* N_HAIANCHENG_EASTPARK-1.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = D9EE3DF31AC26B3300EBD1DB /* N_HAIANCHENG_EASTPARK-1.mbtiles */; };
+		D9EE3E1E1AC26B3300EBD1DB /* N_HAIANCHENG_EASTPARK-2.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = D9EE3DF41AC26B3300EBD1DB /* N_HAIANCHENG_EASTPARK-2.mbtiles */; };
+		D9EE3E1F1AC26B3300EBD1DB /* N_HAIANCHENG_WESTL1.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = D9EE3DF51AC26B3300EBD1DB /* N_HAIANCHENG_WESTL1.mbtiles */; };
+		D9EE3E201AC26B3300EBD1DB /* N_HAIANCHENG_WESTL2.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = D9EE3DF61AC26B3300EBD1DB /* N_HAIANCHENG_WESTL2.mbtiles */; };
+		D9EE3E211AC26B3300EBD1DB /* N_HAIANCHENG_WESTL3.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = D9EE3DF71AC26B3300EBD1DB /* N_HAIANCHENG_WESTL3.mbtiles */; };
+		D9EE3E221AC26B3300EBD1DB /* N_HAIANCHENG_WESTPARK-1.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = D9EE3DF81AC26B3300EBD1DB /* N_HAIANCHENG_WESTPARK-1.mbtiles */; };
+		D9EE3E231AC26B3300EBD1DB /* N_HAIANCHENG_WESTPARK-2.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = D9EE3DF91AC26B3300EBD1DB /* N_HAIANCHENG_WESTPARK-2.mbtiles */; };
+		D9EE3E241AC26B3300EBD1DB /* N_HUANLEHAIAN_PARK.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = D9EE3DFA1AC26B3300EBD1DB /* N_HUANLEHAIAN_PARK.mbtiles */; };
+		D9EE3E251AC26B3300EBD1DB /* N_HUANLEHAIAN.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = D9EE3DFB1AC26B3300EBD1DB /* N_HUANLEHAIAN.mbtiles */; };
+		D9EE3E261AC26B3300EBD1DB /* N_JINGJIBAINA_B1.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = D9EE3DFC1AC26B3300EBD1DB /* N_JINGJIBAINA_B1.mbtiles */; };
+		D9EE3E271AC26B3300EBD1DB /* N_JINGJIBAINA_L1.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = D9EE3DFD1AC26B3300EBD1DB /* N_JINGJIBAINA_L1.mbtiles */; };
+		D9EE3E281AC26B3300EBD1DB /* N_JINGJIBAINA_L2.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = D9EE3DFE1AC26B3300EBD1DB /* N_JINGJIBAINA_L2.mbtiles */; };
+		D9EE3E291AC26B3300EBD1DB /* N_JINGJIBAINA_L3.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = D9EE3DFF1AC26B3300EBD1DB /* N_JINGJIBAINA_L3.mbtiles */; };
+		D9EE3E2A1AC26B3300EBD1DB /* N_JINGJIBAINA_PARKB1.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = D9EE3E001AC26B3300EBD1DB /* N_JINGJIBAINA_PARKB1.mbtiles */; };
+		D9EE3E2B1AC26B3300EBD1DB /* N_JINGJIBAINA_PARKB1H.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = D9EE3E011AC26B3300EBD1DB /* N_JINGJIBAINA_PARKB1H.mbtiles */; };
+		D9EE3E2C1AC26B3300EBD1DB /* N_KKMALL_B1.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = D9EE3E021AC26B3300EBD1DB /* N_KKMALL_B1.mbtiles */; };
+		D9EE3E2D1AC26B3300EBD1DB /* N_KKMALL_L1.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = D9EE3E031AC26B3300EBD1DB /* N_KKMALL_L1.mbtiles */; };
+		D9EE3E2E1AC26B3300EBD1DB /* N_KKMALL_L2.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = D9EE3E041AC26B3300EBD1DB /* N_KKMALL_L2.mbtiles */; };
+		D9EE3E2F1AC26B3300EBD1DB /* N_KKMALL_L3.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = D9EE3E051AC26B3300EBD1DB /* N_KKMALL_L3.mbtiles */; };
+		D9EE3E301AC26B3300EBD1DB /* N_KKMALL_L4.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = D9EE3E061AC26B3300EBD1DB /* N_KKMALL_L4.mbtiles */; };
+		D9EE3E311AC26B3300EBD1DB /* N_KKMALL_PARK-2.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = D9EE3E071AC26B3300EBD1DB /* N_KKMALL_PARK-2.mbtiles */; };
+		D9EE3E321AC26B3300EBD1DB /* N_KKMALL_PARK-3.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = D9EE3E081AC26B3300EBD1DB /* N_KKMALL_PARK-3.mbtiles */; };
+		D9EE3E331AC26B3300EBD1DB /* N_KKMALL_PARKB1J.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = D9EE3E091AC26B3300EBD1DB /* N_KKMALL_PARKB1J.mbtiles */; };
+		D9EE3E341AC26B3300EBD1DB /* N_KKMALL_PARKL2J.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = D9EE3E0A1AC26B3300EBD1DB /* N_KKMALL_PARKL2J.mbtiles */; };
+		D9EE3E351AC26B3300EBD1DB /* N_KKMALL_PARKL3J.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = D9EE3E0B1AC26B3300EBD1DB /* N_KKMALL_PARKL3J.mbtiles */; };
+		D9EE3E361AC26B3300EBD1DB /* N_SHENGUOTOU_B1.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = D9EE3E0C1AC26B3300EBD1DB /* N_SHENGUOTOU_B1.mbtiles */; };
+		D9EE3E371AC26B3300EBD1DB /* N_SHENGUOTOU_L1.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = D9EE3E0D1AC26B3300EBD1DB /* N_SHENGUOTOU_L1.mbtiles */; };
+		D9EE3E381AC26B3300EBD1DB /* N_SHENGUOTOU_L2.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = D9EE3E0E1AC26B3300EBD1DB /* N_SHENGUOTOU_L2.mbtiles */; };
+		D9EE3E391AC26B3300EBD1DB /* N_SHENGUOTOU_L3.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = D9EE3E0F1AC26B3300EBD1DB /* N_SHENGUOTOU_L3.mbtiles */; };
+		D9EE3E3A1AC26B3300EBD1DB /* N_SHENGUOTOU_PARK-2.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = D9EE3E101AC26B3300EBD1DB /* N_SHENGUOTOU_PARK-2.mbtiles */; };
+		D9EE3E3B1AC26B3300EBD1DB /* N_YITIAN_B1.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = D9EE3E111AC26B3300EBD1DB /* N_YITIAN_B1.mbtiles */; };
+		D9EE3E3C1AC26B3300EBD1DB /* N_YITIAN_B2.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = D9EE3E121AC26B3300EBD1DB /* N_YITIAN_B2.mbtiles */; };
+		D9EE3E3D1AC26B3300EBD1DB /* N_YITIAN_L1.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = D9EE3E131AC26B3300EBD1DB /* N_YITIAN_L1.mbtiles */; };
+		D9EE3E3E1AC26B3300EBD1DB /* N_YITIAN_L2.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = D9EE3E141AC26B3300EBD1DB /* N_YITIAN_L2.mbtiles */; };
+		D9EE3E3F1AC26B3300EBD1DB /* N_YITIAN_L3.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = D9EE3E151AC26B3300EBD1DB /* N_YITIAN_L3.mbtiles */; };
+		D9EE3E401AC26B3300EBD1DB /* N_YITIAN_PARK_3.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = D9EE3E161AC26B3300EBD1DB /* N_YITIAN_PARK_3.mbtiles */; };
+		D9F475A21A329AD200ACADE2 /* BTExpansionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F475A11A329AD200ACADE2 /* BTExpansionModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,16 +79,72 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		53C103E63D2F7BFC3D0F7CF4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		5E62CA724F4CDDCC73CFFF58 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D96ECE3B1A32DA5200BF9677 /* BTTabbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTTabbarController.swift; sourceTree = "<group>"; };
 		D9A5FADA1A31B2A4002FAA64 /* BeaconTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeaconTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9A5FADE1A31B2A4002FAA64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D9A5FADF1A31B2A4002FAA64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D9A5FAE11A31B2A4002FAA64 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D9A5FAE41A31B2A4002FAA64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D9A5FAE11A31B2A4002FAA64 /* BTMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTMapViewController.swift; sourceTree = "<group>"; };
 		D9A5FAE61A31B2A4002FAA64 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		D9A5FAE91A31B2A4002FAA64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		D9A5FAEF1A31B2A4002FAA64 /* BeaconToolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeaconToolTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9A5FAF41A31B2A4002FAA64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D9A5FAF51A31B2A4002FAA64 /* BeaconToolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconToolTests.swift; sourceTree = "<group>"; };
+		D9A5FAFF1A31B354002FAA64 /* BTDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTDataModel.swift; sourceTree = "<group>"; };
+		D9B2234A1A4D06AB00B17F00 /* BTDataBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTDataBaseViewController.swift; sourceTree = "<group>"; };
+		D9C94C0C1A356AF300100A3E /* BTSwitchMallView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTSwitchMallView.swift; sourceTree = "<group>"; };
+		D9C94C0E1A35A18300100A3E /* beaconDB */ = {isa = PBXFileReference; lastKnownFileType = file; path = beaconDB; sourceTree = "<group>"; };
+		D9C94C111A36E35000100A3E /* home_bg1136.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = home_bg1136.jpg; sourceTree = "<group>"; };
+		D9C94C131A36E82600100A3E /* home_bg960.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = home_bg960.jpg; sourceTree = "<group>"; };
+		D9C94C151A38309600100A3E /* BTAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTAnnotation.swift; sourceTree = "<group>"; };
+		D9CA306C1A331CB9007213C4 /* BTSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTSettingViewController.swift; sourceTree = "<group>"; };
+		D9CAE85A1A52A7CC0053E758 /* bg_inner.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg_inner.jpg; sourceTree = "<group>"; };
+		D9CFED631A58F549001D7100 /* BTQrViewcontroller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTQrViewcontroller.swift; sourceTree = "<group>"; };
+		D9EE3DED1AC26B3300EBD1DB /* N_COCOPARK_B1.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; path = N_COCOPARK_B1.mbtiles; sourceTree = "<group>"; };
+		D9EE3DEE1AC26B3300EBD1DB /* N_COCOPARK_L1.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; path = N_COCOPARK_L1.mbtiles; sourceTree = "<group>"; };
+		D9EE3DEF1AC26B3300EBD1DB /* N_COCOPARK_L2.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; path = N_COCOPARK_L2.mbtiles; sourceTree = "<group>"; };
+		D9EE3DF01AC26B3300EBD1DB /* N_COCOPARK_L3.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; path = N_COCOPARK_L3.mbtiles; sourceTree = "<group>"; };
+		D9EE3DF11AC26B3300EBD1DB /* N_HAIANCHENG_EASTL1.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; path = N_HAIANCHENG_EASTL1.mbtiles; sourceTree = "<group>"; };
+		D9EE3DF21AC26B3300EBD1DB /* N_HAIANCHENG_EASTL2.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; path = N_HAIANCHENG_EASTL2.mbtiles; sourceTree = "<group>"; };
+		D9EE3DF31AC26B3300EBD1DB /* N_HAIANCHENG_EASTPARK-1.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; path = "N_HAIANCHENG_EASTPARK-1.mbtiles"; sourceTree = "<group>"; };
+		D9EE3DF41AC26B3300EBD1DB /* N_HAIANCHENG_EASTPARK-2.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; path = "N_HAIANCHENG_EASTPARK-2.mbtiles"; sourceTree = "<group>"; };
+		D9EE3DF51AC26B3300EBD1DB /* N_HAIANCHENG_WESTL1.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; path = N_HAIANCHENG_WESTL1.mbtiles; sourceTree = "<group>"; };
+		D9EE3DF61AC26B3300EBD1DB /* N_HAIANCHENG_WESTL2.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; path = N_HAIANCHENG_WESTL2.mbtiles; sourceTree = "<group>"; };
+		D9EE3DF71AC26B3300EBD1DB /* N_HAIANCHENG_WESTL3.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; path = N_HAIANCHENG_WESTL3.mbtiles; sourceTree = "<group>"; };
+		D9EE3DF81AC26B3300EBD1DB /* N_HAIANCHENG_WESTPARK-1.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; path = "N_HAIANCHENG_WESTPARK-1.mbtiles"; sourceTree = "<group>"; };
+		D9EE3DF91AC26B3300EBD1DB /* N_HAIANCHENG_WESTPARK-2.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; path = "N_HAIANCHENG_WESTPARK-2.mbtiles"; sourceTree = "<group>"; };
+		D9EE3DFA1AC26B3300EBD1DB /* N_HUANLEHAIAN_PARK.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; path = N_HUANLEHAIAN_PARK.mbtiles; sourceTree = "<group>"; };
+		D9EE3DFB1AC26B3300EBD1DB /* N_HUANLEHAIAN.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; path = N_HUANLEHAIAN.mbtiles; sourceTree = "<group>"; };
+		D9EE3DFC1AC26B3300EBD1DB /* N_JINGJIBAINA_B1.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; path = N_JINGJIBAINA_B1.mbtiles; sourceTree = "<group>"; };
+		D9EE3DFD1AC26B3300EBD1DB /* N_JINGJIBAINA_L1.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; path = N_JINGJIBAINA_L1.mbtiles; sourceTree = "<group>"; };
+		D9EE3DFE1AC26B3300EBD1DB /* N_JINGJIBAINA_L2.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; path = N_JINGJIBAINA_L2.mbtiles; sourceTree = "<group>"; };
+		D9EE3DFF1AC26B3300EBD1DB /* N_JINGJIBAINA_L3.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; path = N_JINGJIBAINA_L3.mbtiles; sourceTree = "<group>"; };
+		D9EE3E001AC26B3300EBD1DB /* N_JINGJIBAINA_PARKB1.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; path = N_JINGJIBAINA_PARKB1.mbtiles; sourceTree = "<group>"; };
+		D9EE3E011AC26B3300EBD1DB /* N_JINGJIBAINA_PARKB1H.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; path = N_JINGJIBAINA_PARKB1H.mbtiles; sourceTree = "<group>"; };
+		D9EE3E021AC26B3300EBD1DB /* N_KKMALL_B1.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; path = N_KKMALL_B1.mbtiles; sourceTree = "<group>"; };
+		D9EE3E031AC26B3300EBD1DB /* N_KKMALL_L1.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; path = N_KKMALL_L1.mbtiles; sourceTree = "<group>"; };
+		D9EE3E041AC26B3300EBD1DB /* N_KKMALL_L2.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; path = N_KKMALL_L2.mbtiles; sourceTree = "<group>"; };
+		D9EE3E051AC26B3300EBD1DB /* N_KKMALL_L3.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; path = N_KKMALL_L3.mbtiles; sourceTree = "<group>"; };
+		D9EE3E061AC26B3300EBD1DB /* N_KKMALL_L4.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; path = N_KKMALL_L4.mbtiles; sourceTree = "<group>"; };
+		D9EE3E071AC26B3300EBD1DB /* N_KKMALL_PARK-2.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; path = "N_KKMALL_PARK-2.mbtiles"; sourceTree = "<group>"; };
+		D9EE3E081AC26B3300EBD1DB /* N_KKMALL_PARK-3.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; path = "N_KKMALL_PARK-3.mbtiles"; sourceTree = "<group>"; };
+		D9EE3E091AC26B3300EBD1DB /* N_KKMALL_PARKB1J.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; path = N_KKMALL_PARKB1J.mbtiles; sourceTree = "<group>"; };
+		D9EE3E0A1AC26B3300EBD1DB /* N_KKMALL_PARKL2J.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; path = N_KKMALL_PARKL2J.mbtiles; sourceTree = "<group>"; };
+		D9EE3E0B1AC26B3300EBD1DB /* N_KKMALL_PARKL3J.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; path = N_KKMALL_PARKL3J.mbtiles; sourceTree = "<group>"; };
+		D9EE3E0C1AC26B3300EBD1DB /* N_SHENGUOTOU_B1.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; path = N_SHENGUOTOU_B1.mbtiles; sourceTree = "<group>"; };
+		D9EE3E0D1AC26B3300EBD1DB /* N_SHENGUOTOU_L1.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; path = N_SHENGUOTOU_L1.mbtiles; sourceTree = "<group>"; };
+		D9EE3E0E1AC26B3300EBD1DB /* N_SHENGUOTOU_L2.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; path = N_SHENGUOTOU_L2.mbtiles; sourceTree = "<group>"; };
+		D9EE3E0F1AC26B3300EBD1DB /* N_SHENGUOTOU_L3.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; path = N_SHENGUOTOU_L3.mbtiles; sourceTree = "<group>"; };
+		D9EE3E101AC26B3300EBD1DB /* N_SHENGUOTOU_PARK-2.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; path = "N_SHENGUOTOU_PARK-2.mbtiles"; sourceTree = "<group>"; };
+		D9EE3E111AC26B3300EBD1DB /* N_YITIAN_B1.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; path = N_YITIAN_B1.mbtiles; sourceTree = "<group>"; };
+		D9EE3E121AC26B3300EBD1DB /* N_YITIAN_B2.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; path = N_YITIAN_B2.mbtiles; sourceTree = "<group>"; };
+		D9EE3E131AC26B3300EBD1DB /* N_YITIAN_L1.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; path = N_YITIAN_L1.mbtiles; sourceTree = "<group>"; };
+		D9EE3E141AC26B3300EBD1DB /* N_YITIAN_L2.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; path = N_YITIAN_L2.mbtiles; sourceTree = "<group>"; };
+		D9EE3E151AC26B3300EBD1DB /* N_YITIAN_L3.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; path = N_YITIAN_L3.mbtiles; sourceTree = "<group>"; };
+		D9EE3E161AC26B3300EBD1DB /* N_YITIAN_PARK_3.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; path = N_YITIAN_PARK_3.mbtiles; sourceTree = "<group>"; };
+		D9F475A01A31F6DE00ACADE2 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		D9F475A11A329AD200ACADE2 /* BTExpansionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTExpansionModel.swift; sourceTree = "<group>"; };
+		FD3D5C7B25186FBE2110DC09 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +152,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48F4D0A22A08EB5DCAED2B03 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,12 +166,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8A2B6C8A01849B8E42096822 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5E62CA724F4CDDCC73CFFF58 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BBF8F8B3267EE4DB111D7332 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FD3D5C7B25186FBE2110DC09 /* Pods.debug.xcconfig */,
+				53C103E63D2F7BFC3D0F7CF4 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D9A5FAD11A31B2A4002FAA64 = {
 			isa = PBXGroup;
 			children = (
 				D9A5FADC1A31B2A4002FAA64 /* BeaconTool */,
 				D9A5FAF21A31B2A4002FAA64 /* BeaconToolTests */,
 				D9A5FADB1A31B2A4002FAA64 /* Products */,
+				BBF8F8B3267EE4DB111D7332 /* Pods */,
+				8A2B6C8A01849B8E42096822 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,11 +206,20 @@
 		D9A5FADC1A31B2A4002FAA64 /* BeaconTool */ = {
 			isa = PBXGroup;
 			children = (
+				D9C94C101A36E34000100A3E /* picture */,
+				D9C94C0E1A35A18300100A3E /* beaconDB */,
+				D9C94BBA1A3552BA00100A3E /* Map */,
 				D9A5FADF1A31B2A4002FAA64 /* AppDelegate.swift */,
-				D9A5FAE11A31B2A4002FAA64 /* ViewController.swift */,
-				D9A5FAE31A31B2A4002FAA64 /* Main.storyboard */,
+				D9A5FAE11A31B2A4002FAA64 /* BTMapViewController.swift */,
+				D9CA306C1A331CB9007213C4 /* BTSettingViewController.swift */,
+				D9CFED631A58F549001D7100 /* BTQrViewcontroller.swift */,
+				D96ECE3B1A32DA5200BF9677 /* BTTabbarController.swift */,
+				D9B2234A1A4D06AB00B17F00 /* BTDataBaseViewController.swift */,
+				D9A5FAFF1A31B354002FAA64 /* BTDataModel.swift */,
+				D9C94C151A38309600100A3E /* BTAnnotation.swift */,
+				D9F475A11A329AD200ACADE2 /* BTExpansionModel.swift */,
+				D9C94C0C1A356AF300100A3E /* BTSwitchMallView.swift */,
 				D9A5FAE61A31B2A4002FAA64 /* Images.xcassets */,
-				D9A5FAE81A31B2A4002FAA64 /* LaunchScreen.xib */,
 				D9A5FADD1A31B2A4002FAA64 /* Supporting Files */,
 			);
 			path = BeaconTool;
@@ -90,6 +228,7 @@
 		D9A5FADD1A31B2A4002FAA64 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D9F475A01A31F6DE00ACADE2 /* Bridging-Header.h */,
 				D9A5FADE1A31B2A4002FAA64 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -112,6 +251,65 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		D9C94BBA1A3552BA00100A3E /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				D9EE3DED1AC26B3300EBD1DB /* N_COCOPARK_B1.mbtiles */,
+				D9EE3DEE1AC26B3300EBD1DB /* N_COCOPARK_L1.mbtiles */,
+				D9EE3DEF1AC26B3300EBD1DB /* N_COCOPARK_L2.mbtiles */,
+				D9EE3DF01AC26B3300EBD1DB /* N_COCOPARK_L3.mbtiles */,
+				D9EE3DF11AC26B3300EBD1DB /* N_HAIANCHENG_EASTL1.mbtiles */,
+				D9EE3DF21AC26B3300EBD1DB /* N_HAIANCHENG_EASTL2.mbtiles */,
+				D9EE3DF31AC26B3300EBD1DB /* N_HAIANCHENG_EASTPARK-1.mbtiles */,
+				D9EE3DF41AC26B3300EBD1DB /* N_HAIANCHENG_EASTPARK-2.mbtiles */,
+				D9EE3DF51AC26B3300EBD1DB /* N_HAIANCHENG_WESTL1.mbtiles */,
+				D9EE3DF61AC26B3300EBD1DB /* N_HAIANCHENG_WESTL2.mbtiles */,
+				D9EE3DF71AC26B3300EBD1DB /* N_HAIANCHENG_WESTL3.mbtiles */,
+				D9EE3DF81AC26B3300EBD1DB /* N_HAIANCHENG_WESTPARK-1.mbtiles */,
+				D9EE3DF91AC26B3300EBD1DB /* N_HAIANCHENG_WESTPARK-2.mbtiles */,
+				D9EE3DFA1AC26B3300EBD1DB /* N_HUANLEHAIAN_PARK.mbtiles */,
+				D9EE3DFB1AC26B3300EBD1DB /* N_HUANLEHAIAN.mbtiles */,
+				D9EE3DFC1AC26B3300EBD1DB /* N_JINGJIBAINA_B1.mbtiles */,
+				D9EE3DFD1AC26B3300EBD1DB /* N_JINGJIBAINA_L1.mbtiles */,
+				D9EE3DFE1AC26B3300EBD1DB /* N_JINGJIBAINA_L2.mbtiles */,
+				D9EE3DFF1AC26B3300EBD1DB /* N_JINGJIBAINA_L3.mbtiles */,
+				D9EE3E001AC26B3300EBD1DB /* N_JINGJIBAINA_PARKB1.mbtiles */,
+				D9EE3E011AC26B3300EBD1DB /* N_JINGJIBAINA_PARKB1H.mbtiles */,
+				D9EE3E021AC26B3300EBD1DB /* N_KKMALL_B1.mbtiles */,
+				D9EE3E031AC26B3300EBD1DB /* N_KKMALL_L1.mbtiles */,
+				D9EE3E041AC26B3300EBD1DB /* N_KKMALL_L2.mbtiles */,
+				D9EE3E051AC26B3300EBD1DB /* N_KKMALL_L3.mbtiles */,
+				D9EE3E061AC26B3300EBD1DB /* N_KKMALL_L4.mbtiles */,
+				D9EE3E071AC26B3300EBD1DB /* N_KKMALL_PARK-2.mbtiles */,
+				D9EE3E081AC26B3300EBD1DB /* N_KKMALL_PARK-3.mbtiles */,
+				D9EE3E091AC26B3300EBD1DB /* N_KKMALL_PARKB1J.mbtiles */,
+				D9EE3E0A1AC26B3300EBD1DB /* N_KKMALL_PARKL2J.mbtiles */,
+				D9EE3E0B1AC26B3300EBD1DB /* N_KKMALL_PARKL3J.mbtiles */,
+				D9EE3E0C1AC26B3300EBD1DB /* N_SHENGUOTOU_B1.mbtiles */,
+				D9EE3E0D1AC26B3300EBD1DB /* N_SHENGUOTOU_L1.mbtiles */,
+				D9EE3E0E1AC26B3300EBD1DB /* N_SHENGUOTOU_L2.mbtiles */,
+				D9EE3E0F1AC26B3300EBD1DB /* N_SHENGUOTOU_L3.mbtiles */,
+				D9EE3E101AC26B3300EBD1DB /* N_SHENGUOTOU_PARK-2.mbtiles */,
+				D9EE3E111AC26B3300EBD1DB /* N_YITIAN_B1.mbtiles */,
+				D9EE3E121AC26B3300EBD1DB /* N_YITIAN_B2.mbtiles */,
+				D9EE3E131AC26B3300EBD1DB /* N_YITIAN_L1.mbtiles */,
+				D9EE3E141AC26B3300EBD1DB /* N_YITIAN_L2.mbtiles */,
+				D9EE3E151AC26B3300EBD1DB /* N_YITIAN_L3.mbtiles */,
+				D9EE3E161AC26B3300EBD1DB /* N_YITIAN_PARK_3.mbtiles */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		D9C94C101A36E34000100A3E /* picture */ = {
+			isa = PBXGroup;
+			children = (
+				D9C94C131A36E82600100A3E /* home_bg960.jpg */,
+				D9CAE85A1A52A7CC0053E758 /* bg_inner.jpg */,
+				D9C94C111A36E35000100A3E /* home_bg1136.jpg */,
+			);
+			name = picture;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,9 +317,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D9A5FAF91A31B2A4002FAA64 /* Build configuration list for PBXNativeTarget "BeaconTool" */;
 			buildPhases = (
+				EF83000E50F5608476530950 /* Check Pods Manifest.lock */,
 				D9A5FAD61A31B2A4002FAA64 /* Sources */,
 				D9A5FAD71A31B2A4002FAA64 /* Frameworks */,
 				D9A5FAD81A31B2A4002FAA64 /* Resources */,
+				05F05C8A09417325C1BCFC05 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -192,9 +392,53 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9A5FAE51A31B2A4002FAA64 /* Main.storyboard in Resources */,
-				D9A5FAEA1A31B2A4002FAA64 /* LaunchScreen.xib in Resources */,
+				D9EE3E401AC26B3300EBD1DB /* N_YITIAN_PARK_3.mbtiles in Resources */,
+				D9EE3E1D1AC26B3300EBD1DB /* N_HAIANCHENG_EASTPARK-1.mbtiles in Resources */,
+				D9EE3E1F1AC26B3300EBD1DB /* N_HAIANCHENG_WESTL1.mbtiles in Resources */,
+				D9EE3E381AC26B3300EBD1DB /* N_SHENGUOTOU_L2.mbtiles in Resources */,
+				D9EE3E201AC26B3300EBD1DB /* N_HAIANCHENG_WESTL2.mbtiles in Resources */,
+				D9EE3E1A1AC26B3300EBD1DB /* N_COCOPARK_L3.mbtiles in Resources */,
+				D9EE3E261AC26B3300EBD1DB /* N_JINGJIBAINA_B1.mbtiles in Resources */,
+				D9EE3E3F1AC26B3300EBD1DB /* N_YITIAN_L3.mbtiles in Resources */,
+				D9EE3E171AC26B3300EBD1DB /* N_COCOPARK_B1.mbtiles in Resources */,
+				D9EE3E2E1AC26B3300EBD1DB /* N_KKMALL_L2.mbtiles in Resources */,
+				D9C94C141A36E82600100A3E /* home_bg960.jpg in Resources */,
+				D9EE3E291AC26B3300EBD1DB /* N_JINGJIBAINA_L3.mbtiles in Resources */,
+				D9EE3E181AC26B3300EBD1DB /* N_COCOPARK_L1.mbtiles in Resources */,
+				D9EE3E361AC26B3300EBD1DB /* N_SHENGUOTOU_B1.mbtiles in Resources */,
+				D9EE3E311AC26B3300EBD1DB /* N_KKMALL_PARK-2.mbtiles in Resources */,
+				D9EE3E231AC26B3300EBD1DB /* N_HAIANCHENG_WESTPARK-2.mbtiles in Resources */,
+				D9EE3E1C1AC26B3300EBD1DB /* N_HAIANCHENG_EASTL2.mbtiles in Resources */,
+				D9EE3E2C1AC26B3300EBD1DB /* N_KKMALL_B1.mbtiles in Resources */,
+				D9EE3E1E1AC26B3300EBD1DB /* N_HAIANCHENG_EASTPARK-2.mbtiles in Resources */,
+				D9EE3E241AC26B3300EBD1DB /* N_HUANLEHAIAN_PARK.mbtiles in Resources */,
+				D9EE3E281AC26B3300EBD1DB /* N_JINGJIBAINA_L2.mbtiles in Resources */,
+				D9EE3E341AC26B3300EBD1DB /* N_KKMALL_PARKL2J.mbtiles in Resources */,
 				D9A5FAE71A31B2A4002FAA64 /* Images.xcassets in Resources */,
+				D9EE3E271AC26B3300EBD1DB /* N_JINGJIBAINA_L1.mbtiles in Resources */,
+				D9EE3E371AC26B3300EBD1DB /* N_SHENGUOTOU_L1.mbtiles in Resources */,
+				D9EE3E331AC26B3300EBD1DB /* N_KKMALL_PARKB1J.mbtiles in Resources */,
+				D9CAE85B1A52A7CC0053E758 /* bg_inner.jpg in Resources */,
+				D9EE3E3E1AC26B3300EBD1DB /* N_YITIAN_L2.mbtiles in Resources */,
+				D9EE3E391AC26B3300EBD1DB /* N_SHENGUOTOU_L3.mbtiles in Resources */,
+				D9C94C0F1A35A18300100A3E /* beaconDB in Resources */,
+				D9C94C121A36E35000100A3E /* home_bg1136.jpg in Resources */,
+				D9EE3E3C1AC26B3300EBD1DB /* N_YITIAN_B2.mbtiles in Resources */,
+				D9EE3E221AC26B3300EBD1DB /* N_HAIANCHENG_WESTPARK-1.mbtiles in Resources */,
+				D9EE3E351AC26B3300EBD1DB /* N_KKMALL_PARKL3J.mbtiles in Resources */,
+				D9EE3E301AC26B3300EBD1DB /* N_KKMALL_L4.mbtiles in Resources */,
+				D9EE3E3D1AC26B3300EBD1DB /* N_YITIAN_L1.mbtiles in Resources */,
+				D9EE3E2B1AC26B3300EBD1DB /* N_JINGJIBAINA_PARKB1H.mbtiles in Resources */,
+				D9EE3E2D1AC26B3300EBD1DB /* N_KKMALL_L1.mbtiles in Resources */,
+				D9EE3E3A1AC26B3300EBD1DB /* N_SHENGUOTOU_PARK-2.mbtiles in Resources */,
+				D9EE3E2F1AC26B3300EBD1DB /* N_KKMALL_L3.mbtiles in Resources */,
+				D9EE3E211AC26B3300EBD1DB /* N_HAIANCHENG_WESTL3.mbtiles in Resources */,
+				D9EE3E3B1AC26B3300EBD1DB /* N_YITIAN_B1.mbtiles in Resources */,
+				D9EE3E321AC26B3300EBD1DB /* N_KKMALL_PARK-3.mbtiles in Resources */,
+				D9EE3E191AC26B3300EBD1DB /* N_COCOPARK_L2.mbtiles in Resources */,
+				D9EE3E251AC26B3300EBD1DB /* N_HUANLEHAIAN.mbtiles in Resources */,
+				D9EE3E1B1AC26B3300EBD1DB /* N_HAIANCHENG_EASTL1.mbtiles in Resources */,
+				D9EE3E2A1AC26B3300EBD1DB /* N_JINGJIBAINA_PARKB1.mbtiles in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,13 +451,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		05F05C8A09417325C1BCFC05 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF83000E50F5608476530950 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D9A5FAD61A31B2A4002FAA64 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9A5FAE21A31B2A4002FAA64 /* ViewController.swift in Sources */,
+				D9A5FAE21A31B2A4002FAA64 /* BTMapViewController.swift in Sources */,
+				D9CFED641A58F549001D7100 /* BTQrViewcontroller.swift in Sources */,
+				D9CA306D1A331CB9007213C4 /* BTSettingViewController.swift in Sources */,
+				D9F475A21A329AD200ACADE2 /* BTExpansionModel.swift in Sources */,
+				D9B2234B1A4D06AC00B17F00 /* BTDataBaseViewController.swift in Sources */,
+				D96ECE3C1A32DA5200BF9677 /* BTTabbarController.swift in Sources */,
+				D9A5FB001A31B354002FAA64 /* BTDataModel.swift in Sources */,
 				D9A5FAE01A31B2A4002FAA64 /* AppDelegate.swift in Sources */,
+				D9C94C161A38309600100A3E /* BTAnnotation.swift in Sources */,
+				D9C94C0D1A356AF300100A3E /* BTSwitchMallView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,25 +519,6 @@
 			targetProxy = D9A5FAF01A31B2A4002FAA64 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		D9A5FAE31A31B2A4002FAA64 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D9A5FAE41A31B2A4002FAA64 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		D9A5FAE81A31B2A4002FAA64 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D9A5FAE91A31B2A4002FAA64 /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		D9A5FAF71A31B2A4002FAA64 /* Debug */ = {
@@ -334,21 +600,29 @@
 		};
 		D9A5FAFA1A31B2A4002FAA64 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD3D5C7B25186FBE2110DC09 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = BeaconTool/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PRODUCT_NAME:rfc1034identifier)/Bridging-Header.h";
 			};
 			name = Debug;
 		};
 		D9A5FAFB1A31B2A4002FAA64 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 53C103E63D2F7BFC3D0F7CF4 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = BeaconTool/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PRODUCT_NAME:rfc1034identifier)/Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -405,6 +679,7 @@
 				D9A5FAFB1A31B2A4002FAA64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D9A5FAFC1A31B2A4002FAA64 /* Build configuration list for PBXNativeTarget "BeaconToolTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +688,7 @@
 				D9A5FAFE1A31B2A4002FAA64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
