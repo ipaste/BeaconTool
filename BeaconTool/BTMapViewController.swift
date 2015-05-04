@@ -24,7 +24,7 @@ class BTMapViewController: UIViewController,BTSwitchMallDataSource,BTSwitchMallD
     var bluetoothOn:Bool = false;
     var lock:NSLock = NSLock();
     var locationManager:CLLocationManager = CLLocationManager();
-    override init() {
+    init() {
         super.init(nibName:nil,bundle:nil);
         var result:FMResultSet =  dataBase.executeQuery("select * from Mall", withArgumentsInArray: nil);
         while (result.next()){
@@ -57,8 +57,8 @@ class BTMapViewController: UIViewController,BTSwitchMallDataSource,BTSwitchMallD
         }
         self.view.addSubview(self.background!);
         
-        var defaultMall:BTMall = self.allMall[0] as BTMall;
-        var defaultFloor:BTFloor = defaultMall.floos.firstObject as BTFloor;
+        var defaultMall:BTMall = self.allMall[0] as! BTMall;
+        var defaultFloor:BTFloor = defaultMall.floos.firstObject as! BTFloor;
         self.mapView = RMMapView(frame: CGRectMake(10, CGRectGetMaxY(self.navigationController!.navigationBar.frame), CGRectGetWidth(self.view.frame) - 20, CGRectGetHeight(self.view.frame) - CGRectGetHeight(self.navigationController!.navigationBar.frame) - 30));
         self.mapView?.showLogoBug = false;
         self.mapView?.hideAttribution = true;
@@ -141,7 +141,7 @@ class BTMapViewController: UIViewController,BTSwitchMallDataSource,BTSwitchMallD
         self.mapView?.removeAllAnnotations();
         var tilesource:RMMBTilesSource = RMMBTilesSource(tileSetResource: floor.mapName);
         self.switchMallView?.switchMallView(changeMall: floor.mall, changeFloor: floor);
-        self.navigationItem.title = floor.mall.name + " - " + floor.name;
+        self.navigationItem.title = floor.mall.name + " - " + (floor.name as String);
         self.mapView?.tileSource = tilesource;
         self.mapView?.maxZoom = tilesource.maxZoom;
         for beacon in floor.beacons{
