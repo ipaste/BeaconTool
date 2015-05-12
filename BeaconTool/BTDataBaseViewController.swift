@@ -9,8 +9,8 @@
 import UIKit
 
 class BTDataBaseViewController: UIViewController {
-    let sourcePath:NSString = "/Users/YunTop/Desktop/highGuangDB"
-    let dbPath:NSString = "/Users/YunTop/Desktop/beaconDB"
+    let sourcePath:String = "/Users/YunTop/Desktop/highGuangDB"
+    let dbPath:String = "/Users/YunTop/Desktop/beaconDB"
     var sourceDataBase:FMDatabase!;
     var db:FMDatabase!;
     var sourceBeacon:NSMutableArray = NSMutableArray();
@@ -43,7 +43,7 @@ class BTDataBaseViewController: UIViewController {
             db.open();
             db.executeUpdate("delete from beacon", withArgumentsInArray: nil);
             for beacon in self.sourceBeacon {
-                var beacon:BTSourceBeacon = beacon as BTSourceBeacon;
+                var beacon:BTSourceBeacon = beacon as! BTSourceBeacon;
                 db.executeUpdate("insert into beacon(ID,uniId,minor,major,latitude,longtitude,floorId,comment) values(?,?,?,?,?,?,?,?)", withArgumentsInArray: [beacon.ID,beacon.uniId,beacon.minor,beacon.major,beacon.latitude,beacon.longtitude,beacon.floorId,beacon.comment]);
             }
         }

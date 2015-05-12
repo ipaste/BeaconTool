@@ -7,9 +7,8 @@
 //
 
 import UIKit
-
 let BIGGER_THEN_IPHONE5:Bool = UIScreen.mainScreen().currentMode?.size.height >= 1136.0 ? true : false;
-class BTMapViewController: UIViewController,BTSwitchMallDataSource,BTSwitchMallDelegate,RMMapViewDelegate,BTBeaconManagerDelegate,CBCentralManagerDelegate {
+class BTMapViewController: UIViewController,BTSwitchMallDataSource,BTSwitchMallDelegate,RMMapViewDelegate,BTBeaconManagerDelegate,BTModeifyBeaconToolDelegate,CBCentralManagerDelegate {
     var mapView:RMMapView?;
     var switchMallView:BTSwitchMallView?;
     var userFloor:BTFloor?;
@@ -18,6 +17,7 @@ class BTMapViewController: UIViewController,BTSwitchMallDataSource,BTSwitchMallD
     var currentDisplayFloor:BTFloor?;
     var leftBarButton:UIButton?;
     var beaconManager:BTBeaconManager?;
+    var modeifyBeaconManager:BTModeifyBeaconTool?;
     var currentBeacons:NSMutableArray = NSMutableArray();
     var bluetoothManager:CBCentralManager?;
     var switchFloor:Bool = true;
@@ -40,6 +40,10 @@ class BTMapViewController: UIViewController,BTSwitchMallDataSource,BTSwitchMallD
             self.locationManager.requestAlwaysAuthorization();
             self.locationManager.requestWhenInUseAuthorization();
         }
+        
+        self.modeifyBeaconManager = BTModeifyBeaconTool.shareBeaconTool();
+        self.modeifyBeaconManager?.delegate = self;
+        self.modeifyBeaconManager!.startModifyBeacon();
     }
 
     required init(coder aDecoder: NSCoder) {
@@ -71,7 +75,7 @@ class BTMapViewController: UIViewController,BTSwitchMallDataSource,BTSwitchMallD
         
         self.switchMap(defaultFloor);
         
-        self.navigationItem.title = NSString(string: defaultMall.name + " - " + defaultFloor.name);
+        self.navigationItem.title = defaultMall.name as String + " - " + (defaultFloor.name as String);
         self.navigationController?.navigationBar.barStyle = UIBarStyle.BlackTranslucent;
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: self.rightBarButtonItem());
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: self.leftBarButtonItem());
@@ -139,13 +143,13 @@ class BTMapViewController: UIViewController,BTSwitchMallDataSource,BTSwitchMallD
 
     func switchMap(floor:BTFloor){
         self.mapView?.removeAllAnnotations();
-        var tilesource:RMMBTilesSource = RMMBTilesSource(tileSetResource: floor.mapName);
+        var tilesource:RMMBTilesSource = RMMBTilesSource(tileSetResource: floor.mapName as String);
         self.switchMallView?.switchMallView(changeMall: floor.mall, changeFloor: floor);
-        self.navigationItem.title = floor.mall.name + " - " + (floor.name as String);
+        self.navigationItem.title = floor.mall.name as String + " - " + (floor.name as String);
         self.mapView?.tileSource = tilesource;
         self.mapView?.maxZoom = tilesource.maxZoom;
         for beacon in floor.beacons{
-            var annotation:BTBeaconAnnotation = BTBeaconAnnotation(mapView: self.mapView, coordinate: (beacon as BTBeacon).coordinate, andTitle: (beacon as BTBeacon).name, beacon: beacon as BTBeacon);
+            var annotation:BTBeaconAnnotation = BTBeaconAnnotation(mapView: self.mapView, coordinate: (beacon as! BTBeacon).coordinate, andTitle: (beacon as! BTBeacon).name as String, beacon: beacon as! BTBeacon);
             self.mapView?.addAnnotation(annotation);
         }
 
@@ -155,7 +159,7 @@ class BTMapViewController: UIViewController,BTSwitchMallDataSource,BTSwitchMallD
 //MARK: mapViewDelegate
     func mapView(mapView: RMMapView!, layerForAnnotation annotation: RMAnnotation!) -> RMMapLayer! {
         if (annotation.isMemberOfClass(BTBeaconAnnotation)){
-           return  (annotation as BTBeaconAnnotation).beaconLayer;
+           return  (annotation as! BTBeaconAnnotation).beaconLayer;
         }
         return annotation.layer;
     }
@@ -181,22 +185,21 @@ class BTMapViewController: UIViewController,BTSwitchMallDataSource,BTSwitchMallD
                 
             }
             
-            if ((self.switchFloor || switchFloor.mall.uniId.isEqualToString(self.currentDisplayFloor!.mall.uniId))){
-                if (!switchFloor.uniId.isEqualToString(self.currentDisplayFloor!.uniId) && self.switchFloor){
+            if ((self.switchFloor || switchFloor.mall.uniId == self.currentDisplayFloor?.mall.uniId)){
+                if (switchFloor.uniId != self.currentDisplayFloor?.uniId && self.switchFloor){
                     self.switchMap(switchFloor);
                 }
                 self.switchFloor = false;
             }else{
 
             }
-        
             
             for (var index:Int = 0;index < beacons.count;index++){
-                var beacon:BTBeacon = beacons[index] as BTBeacon;
-                var distance:NSNumber = distances[index] as NSNumber;
+                var beacon:BTBeacon = beacons[index] as! BTBeacon;
+                var distance:NSNumber = distances[index] as! NSNumber;
                 for annotation in self.mapView!.annotations {
-                    if ((annotation as BTBeaconAnnotation).title == beacon.name){
-                        (annotation as BTBeaconAnnotation).changeAsMark(distance);
+                    if ((annotation as! BTBeaconAnnotation).title == beacon.name){
+                        (annotation as! BTBeaconAnnotation).changeAsMark(distance, color: UIColor.greenColor());
                     }
                 }
             }
@@ -207,25 +210,34 @@ class BTMapViewController: UIViewController,BTSwitchMallDataSource,BTSwitchMallD
     func floorVoting(beacons:NSArray) -> BTFloor{
         var floorDictionary:NSMutableDictionary = NSMutableDictionary();
         for beacon in beacons{
-            var floorKey:NSString = (beacon as BTBeacon).floor.uniId;
-            if (floorDictionary.valueForKey (floorKey) == nil){
+            var floorKey:String = (beacon as! BTBeacon).floor.uniId as String;
+            if (floorDictionary.valueForKey(floorKey) == nil){
                 floorDictionary.setValue("1", forKey: floorKey);
             }else{
-                var number:NSString = floorDictionary.valueForKey(floorKey) as NSString;
+                var number:NSString = floorDictionary.valueForKey(floorKey) as! NSString;
                 number = NSString(format: "%d", number.integerValue + 1);
                 floorDictionary.setValue(number, forKey: floorKey);
             }
         }
         var result:NSArray = floorDictionary.keysSortedByValueUsingComparator { (obj1, obj2) -> NSComparisonResult in
-            return obj1.compare(obj2 as NSString, options: NSStringCompareOptions.NumericSearch);
+            return obj1.compare(obj2 as! String, options: NSStringCompareOptions.NumericSearch);
         }
         var floor:BTFloor?;
         for beacon in beacons{
-            if ((beacon as BTBeacon).floor.uniId.isEqualToString(result.firstObject as NSString)){
-                floor = (beacon as BTBeacon).floor;
+            if ((beacon as! BTBeacon).floor.uniId.isEqualToString(result.firstObject as! String)){
+                floor = (beacon as! BTBeacon).floor;
             }
         }
         return floor!;
+    }
+    
+    func modeifyBeaconTool(BeaconTool: BTModeifyBeaconTool, sourceBeacon beacon: ABBeacon) {
+        var identifier = "\(beacon.major)-\(beacon.minor)";
+        for annotation in self.mapView!.annotations {
+            if ((annotation as! BTBeaconAnnotation).title == identifier){
+                (annotation as! BTBeaconAnnotation).changeAsMark(beacon.distance, color: UIColor.orangeColor());
+            }
+        }
     }
     
     func centralManagerDidUpdateState(central: CBCentralManager!) {
@@ -241,9 +253,5 @@ class BTMapViewController: UIViewController,BTSwitchMallDataSource,BTSwitchMallD
         }
     }
     
-    func test(){
-       // self.presentViewController( BTDataBaseViewController(), animated: false, completion: nil);
-
-    }
 }
 

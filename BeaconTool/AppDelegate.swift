@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.rootViewController = mapViewController;
         self.window?.makeKeyAndVisible();
         
-        AVOSCloud.setApplicationId("p8eq0otfz420q56dsn8s1yp8dp82vopaikc05q5h349nd87w", clientKey: "kzx1ajhbxkno0v564rcremcz18ub0xh2upbjabbg5lruwkqg");
+        //AVOSCloud.setApplicationId("p8eq0otfz420q56dsn8s1yp8dp82vopaikc05q5h349nd87w", clientKey: "kzx1ajhbxkno0v564rcremcz18ub0xh2upbjabbg5lruwkqg");
         return true;
     }
 

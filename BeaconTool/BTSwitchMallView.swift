@@ -35,7 +35,7 @@ class BTSwitchMallView: UIView,UITableViewDelegate,UITableViewDataSource {
         self.mallButton?.addTarget(self, action: "mallDownPull:", forControlEvents: UIControlEvents.TouchUpInside);
         self.mallButton?.setImage(UIImage(named: "Map_img_switchArrow_down"), forState: UIControlState.Normal);
         self.mallButton?.setImage(UIImage(named: "Map_img_switchArrow_up"), forState: UIControlState.Selected);
-        self.mallButton?.setTitle(defaultMall.name, forState: UIControlState.Normal);
+        self.mallButton?.setTitle(defaultMall.name as String, forState: UIControlState.Normal);
         self.addSubview(self.mallButton!);
         
         self.tableViewMall = UITableView(frame: CGRectMake(10, CGRectGetMaxY(self.mallButton!.frame) - 5, CGRectGetWidth(self.mallButton!.frame), kBTDefaultTableViewHeight));
@@ -51,7 +51,7 @@ class BTSwitchMallView: UIView,UITableViewDelegate,UITableViewDataSource {
         self.floorButton = UIButton(frame: CGRectMake(20, CGRectGetMaxY(self.mallButton!.frame) + 10, CGRectGetWidth(self.mallButton!.frame) - 20, 35));
         self.floorButton?.setImage(UIImage(named: "Map_img_switchArrow_down"), forState: UIControlState.Normal);
         self.floorButton?.setImage(UIImage(named: "Map_img_switchArrow_up"), forState: UIControlState.Selected);
-        self.floorButton?.setTitle((self.floors?.firstObject as BTFloor).name, forState: UIControlState.Normal);
+        self.floorButton?.setTitle((self.floors?.firstObject as! BTFloor).name as String, forState: UIControlState.Normal);
         self.floorButton?.addTarget(self, action: "floorDownPull:", forControlEvents: UIControlEvents.TouchUpInside);
         self.insertSubview(self.floorButton!, belowSubview: self.tableViewMall!);
         
@@ -71,18 +71,18 @@ class BTSwitchMallView: UIView,UITableViewDelegate,UITableViewDataSource {
     
     internal override func layoutSubviews() {
         self.backgroundView!.layer.cornerRadius = 10;
-        self.backgroundView!.backgroundColor = UIColor(String: "000000", alpha: 0.7);
+        self.backgroundView!.backgroundColor = UIColor(string: "000000", alpha: 0.7);
         
-        self.mallButton?.backgroundColor = UIColor(String: "505050", alpha: 1.0);
+        self.mallButton?.backgroundColor = UIColor(string: "505050", alpha: 1.0);
         self.mallButton?.layer.cornerRadius = 5;
-        self.mallButton?.setTitleColor(UIColor(String: "ffffff", alpha: 1.0), forState: UIControlState.Normal);
+        self.mallButton?.setTitleColor(UIColor(string: "ffffff", alpha: 1.0), forState: UIControlState.Normal);
         self.mallButton?.titleEdgeInsets = UIEdgeInsetsMake(0, -10, 0, 0);
         self.mallButton?.imageEdgeInsets = UIEdgeInsetsMake(0, CGRectGetWidth(self.mallButton!.frame) - 30, 0, 0);
         self.mallButton?.contentHorizontalAlignment = UIControlContentHorizontalAlignment.Left;
         
-        self.floorButton?.backgroundColor = UIColor(String: "505050", alpha: 1.0);
+        self.floorButton?.backgroundColor = UIColor(string: "505050", alpha: 1.0);
         self.floorButton?.layer.cornerRadius = 5;
-        self.floorButton?.setTitleColor(UIColor(String: "ffffff", alpha: 1.0), forState: UIControlState.Normal);
+        self.floorButton?.setTitleColor(UIColor(string: "ffffff", alpha: 1.0), forState: UIControlState.Normal);
         self.floorButton?.titleEdgeInsets = UIEdgeInsetsMake(0, -10, 0, 0);
         self.floorButton?.imageEdgeInsets = UIEdgeInsetsMake(0, CGRectGetWidth(self.floorButton!.frame) - 30, 0, 0);
         self.floorButton?.contentHorizontalAlignment = UIControlContentHorizontalAlignment.Left;
@@ -99,7 +99,7 @@ class BTSwitchMallView: UIView,UITableViewDelegate,UITableViewDataSource {
         self.zoomOutButton?.setTitle("-", forState: UIControlState.Normal);
         self.zoomOutButton?.titleEdgeInsets = UIEdgeInsets(top: -3, left: 2, bottom: 0, right: 0);
         self.zoomOutButton?.titleLabel?.font = UIFont.systemFontOfSize(24);
-        self.zoomOutButton?.backgroundColor = UIColor(String: "505050", alpha: 1.0);
+        self.zoomOutButton?.backgroundColor = UIColor(string: "505050", alpha: 1.0);
         self.zoomOutButton!.layer.cornerRadius = CGRectGetWidth(self.zoomOutButton!.frame) / 2;
     
     }
@@ -125,25 +125,25 @@ class BTSwitchMallView: UIView,UITableViewDelegate,UITableViewDataSource {
             cell = tableView.dequeueReusableCellWithIdentifier("MallCell") as? UITableViewCell;
             if  (cell == nil){
                 cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "MallCell");
-                cell!.backgroundColor = UIColor(String: "606060", alpha: 1.0);
-                cell!.textLabel?.textColor = UIColor(String: "f1f1f1", alpha: 1.0);
+                cell!.backgroundColor = UIColor(string: "606060", alpha: 1.0);
+                cell!.textLabel?.textColor = UIColor(string: "f1f1f1", alpha: 1.0);
                 cell!.textLabel?.font = UIFont.systemFontOfSize(16);
             }
             
             
-            var tmpMall:BTMall = self.malls![indexPath.row] as BTMall;
+            var tmpMall:BTMall = self.malls![indexPath.row] as! BTMall;
             
-            cell!.textLabel?.text = tmpMall.name;
+            cell!.textLabel?.text = tmpMall.name as String;
         }else{
             cell = tableView.dequeueReusableCellWithIdentifier("FloorCell") as? UITableViewCell;
             if  (cell == nil){
                 cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "FloorCell");
-                cell!.backgroundColor = UIColor(String: "606060", alpha: 1.0);
-                cell!.textLabel?.textColor = UIColor(String: "f1f1f1", alpha: 1.0);
+                cell!.backgroundColor = UIColor(string: "606060", alpha: 1.0);
+                cell!.textLabel?.textColor = UIColor(string: "f1f1f1", alpha: 1.0);
                 cell!.textLabel?.font = UIFont.systemFontOfSize(16);
             }
-            var tmpFloor:BTFloor = self.floors![indexPath.row] as BTFloor;
-            cell!.textLabel?.text = tmpFloor.name;
+            var tmpFloor:BTFloor = self.floors![indexPath.row] as! BTFloor;
+            cell!.textLabel?.text = tmpFloor.name as String;
         }
        
         return cell!;
@@ -159,25 +159,25 @@ class BTSwitchMallView: UIView,UITableViewDelegate,UITableViewDataSource {
                 self.floors?.removeAllObjects();
                 self.floors = NSMutableArray(array: tmpMall!.floos);
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                    self.mallButton?.setTitle(tmpMall!.name, forState: UIControlState.Normal);
-                    self.floorButton?.setTitle((tmpMall!.floos.firstObject as BTFloor).name, forState: UIControlState.Normal);
+                    self.mallButton?.setTitle(tmpMall!.name as String, forState: UIControlState.Normal);
+                    self.floorButton?.setTitle((tmpMall!.floos.firstObject as! BTFloor).name as String, forState: UIControlState.Normal);
                     
                     self.tableViewFloor?.reloadData();
                     self.tableViewFloor?.scrollToRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0), atScrollPosition: UITableViewScrollPosition.Top, animated: false);
                     if (self.delegate!.respondsToSelector("switchMall:selectFloor:")){
-                        self.delegate!.switchMall!(self, selectFloor: self.floors?.firstObject as BTFloor);
+                        self.delegate!.switchMall!(self, selectFloor: self.floors?.firstObject as! BTFloor);
                     }
                 })
             })
             
         }else{
             self.floorDownPull(self.floorButton!);
-            var tmpFloor:BTFloor = self.floors![indexPath.row] as BTFloor;
+            var tmpFloor:BTFloor = self.floors![indexPath.row] as! BTFloor;
             tableView.deselectRowAtIndexPath(indexPath, animated: false);
             if (self.delegate!.respondsToSelector("switchMall:selectFloor:")){
                 self.delegate!.switchMall!(self, selectFloor: tmpFloor);
             }
-            self.floorButton?.setTitle(tmpFloor.name, forState: UIControlState.Normal);
+            self.floorButton?.setTitle(tmpFloor.name as String, forState: UIControlState.Normal);
         }
     }
     
@@ -230,8 +230,8 @@ class BTSwitchMallView: UIView,UITableViewDelegate,UITableViewDataSource {
     }
     
     func switchMallView(changeMall mall:BTMall,changeFloor floor:BTFloor){
-        self.mallButton?.setTitle(mall.name, forState: UIControlState.Normal);
-        self.floorButton?.setTitle(floor.name, forState: UIControlState.Normal);
+        self.mallButton?.setTitle(mall.name as String, forState: UIControlState.Normal);
+        self.floorButton?.setTitle(floor.name as String, forState: UIControlState.Normal);
         self.floors?.removeAllObjects();
         self.floors = nil;
         self.floors = NSMutableArray(array: mall.floos);

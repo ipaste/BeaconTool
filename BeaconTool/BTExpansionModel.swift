@@ -42,8 +42,8 @@ extension UIImage {
 }
 
 extension UIColor {
-    convenience init?(String:NSString!,alpha:CGFloat?){
-        var tmpString = String;
+    convenience init?(string:String!,alpha:CGFloat?){
+        var tmpString = string;
         var tmpAlpha:CGFloat! = alpha;
         var red:UInt32 = 0;
         var green:UInt32 = 0
@@ -51,17 +51,18 @@ extension UIColor {
         if (tmpAlpha == nil){
             tmpAlpha = 1.0;
         }
-        if(tmpString.length >= 6){
+        
+        if((tmpString as NSString).length >= 6){
             if (!tmpString.hasPrefix("#")){
                 tmpString = "#" + tmpString;
             }
             
             var range:NSRange = NSRange(location: 1,length: 2);
-            NSScanner.localizedScannerWithString(tmpString.substringWithRange(range)).scanHexInt(&red);
+            NSScanner.localizedScannerWithString((tmpString as NSString).substringWithRange(range)).scanHexInt(&red);
             range.location = 3;
-            NSScanner.localizedScannerWithString(tmpString.substringWithRange(range)).scanHexInt(&green);
+            NSScanner.localizedScannerWithString((tmpString as NSString).substringWithRange(range)).scanHexInt(&green);
             range.location = 5;
-            NSScanner.localizedScannerWithString(tmpString.substringWithRange(range)).scanHexInt(&blue);
+            NSScanner.localizedScannerWithString((tmpString as NSString).substringWithRange(range)).scanHexInt(&blue);
             
         }
         
@@ -103,18 +104,17 @@ extension RMMarker {
         
     }
     
-    func updateLayer(changeColor:Bool,changeDistance:NSNumber?){
+    func updateLayer(changeColor:UIColor?,changeDistance:NSNumber?){
         for sublayer in self.sublayers {
-            if ((sublayer as CATextLayer).name != nil && (sublayer as CATextLayer).name == "distance"){
+            if ((sublayer as! CATextLayer).name != nil && (sublayer as! CATextLayer).name == "distance"){
                 if(changeDistance != nil){
                     var distance:Double =  floor(changeDistance!.doubleValue);
-                    (sublayer as CATextLayer).string = NSString(format: "%.0lf", distance);
+                    (sublayer as! CATextLayer).string = NSString(format: "%.0lf", distance);
                 }
             }
-            if(changeColor){
-                (sublayer as CATextLayer).foregroundColor = UIColor.greenColor().CGColor;
-                self.backgroundColor = UIColor.greenColor().CGColor;
-            }
+           
+            (sublayer as! CATextLayer).foregroundColor = UIColor.greenColor().CGColor;
+            self.backgroundColor = changeColor!.CGColor;
         }
     
     }

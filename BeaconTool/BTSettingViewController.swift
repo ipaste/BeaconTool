@@ -11,8 +11,8 @@ import UIKit
 class BTSettingViewController: UIViewController {
     override func viewDidLoad() {
         self.navigationItem.title = "设置";
-        self.navigationController?.navigationBar.tintColor = UIColor(String: "e95e37", alpha: 1.0);
-        self.navigationController?.navigationBar.titleTextAttributes = NSDictionary(object: UIColor(String: "e95e37", alpha: 1.0)!, forKey: NSForegroundColorAttributeName);
+        self.navigationController?.navigationBar.tintColor = UIColor(string: "e95e37", alpha: 1.0);
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor(string: "e95e37", alpha: 1.0)!];
     }
     
     override func viewWillLayoutSubviews() {

@@ -8,7 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		48F4D0A22A08EB5DCAED2B03 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E62CA724F4CDDCC73CFFF58 /* libPods.a */; };
+		D90451931AF75FF5003E9F59 /* libAprilBeaconSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D90451921AF75FF5003E9F59 /* libAprilBeaconSDK.a */; };
 		D96ECE3C1A32DA5200BF9677 /* BTTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96ECE3B1A32DA5200BF9677 /* BTTabbarController.swift */; };
+		D9882DCF1AF9BFD10088D6E8 /* BTModeifyBeaconTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9882DCE1AF9BFD10088D6E8 /* BTModeifyBeaconTool.swift */; };
 		D9A5FAE01A31B2A4002FAA64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A5FADF1A31B2A4002FAA64 /* AppDelegate.swift */; };
 		D9A5FAE21A31B2A4002FAA64 /* BTMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A5FAE11A31B2A4002FAA64 /* BTMapViewController.swift */; };
 		D9A5FAE71A31B2A4002FAA64 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9A5FAE61A31B2A4002FAA64 /* Images.xcassets */; };
@@ -22,7 +24,7 @@
 		D9C94C161A38309600100A3E /* BTAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C94C151A38309600100A3E /* BTAnnotation.swift */; };
 		D9CA306D1A331CB9007213C4 /* BTSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CA306C1A331CB9007213C4 /* BTSettingViewController.swift */; };
 		D9CAE85B1A52A7CC0053E758 /* bg_inner.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D9CAE85A1A52A7CC0053E758 /* bg_inner.jpg */; };
-		D9CFED641A58F549001D7100 /* BTQrViewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CFED631A58F549001D7100 /* BTQrViewcontroller.swift */; };
+		D9E00E771B01EAE100967278 /* Beaconlist.csv in Resources */ = {isa = PBXBuildFile; fileRef = D9E00E761B01EAE100967278 /* Beaconlist.csv */; };
 		D9EE3E171AC26B3300EBD1DB /* N_COCOPARK_B1.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = D9EE3DED1AC26B3300EBD1DB /* N_COCOPARK_B1.mbtiles */; };
 		D9EE3E181AC26B3300EBD1DB /* N_COCOPARK_L1.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = D9EE3DEE1AC26B3300EBD1DB /* N_COCOPARK_L1.mbtiles */; };
 		D9EE3E191AC26B3300EBD1DB /* N_COCOPARK_L2.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = D9EE3DEF1AC26B3300EBD1DB /* N_COCOPARK_L2.mbtiles */; };
@@ -81,7 +83,15 @@
 /* Begin PBXFileReference section */
 		53C103E63D2F7BFC3D0F7CF4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		5E62CA724F4CDDCC73CFFF58 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D904518C1AF75FF5003E9F59 /* ABBeacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABBeacon.h; sourceTree = "<group>"; };
+		D904518D1AF75FF5003E9F59 /* ABBeaconManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABBeaconManager.h; sourceTree = "<group>"; };
+		D904518E1AF75FF5003E9F59 /* ABBeaconRegion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABBeaconRegion.h; sourceTree = "<group>"; };
+		D904518F1AF75FF5003E9F59 /* ABError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABError.h; sourceTree = "<group>"; };
+		D90451901AF75FF5003E9F59 /* ABSensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABSensor.h; sourceTree = "<group>"; };
+		D90451911AF75FF5003E9F59 /* AprilBeaconSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AprilBeaconSDK.h; sourceTree = "<group>"; };
+		D90451921AF75FF5003E9F59 /* libAprilBeaconSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAprilBeaconSDK.a; sourceTree = "<group>"; };
 		D96ECE3B1A32DA5200BF9677 /* BTTabbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTTabbarController.swift; sourceTree = "<group>"; };
+		D9882DCE1AF9BFD10088D6E8 /* BTModeifyBeaconTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTModeifyBeaconTool.swift; sourceTree = "<group>"; };
 		D9A5FADA1A31B2A4002FAA64 /* BeaconTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeaconTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9A5FADE1A31B2A4002FAA64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D9A5FADF1A31B2A4002FAA64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -99,7 +109,7 @@
 		D9C94C151A38309600100A3E /* BTAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTAnnotation.swift; sourceTree = "<group>"; };
 		D9CA306C1A331CB9007213C4 /* BTSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTSettingViewController.swift; sourceTree = "<group>"; };
 		D9CAE85A1A52A7CC0053E758 /* bg_inner.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg_inner.jpg; sourceTree = "<group>"; };
-		D9CFED631A58F549001D7100 /* BTQrViewcontroller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTQrViewcontroller.swift; sourceTree = "<group>"; };
+		D9E00E761B01EAE100967278 /* Beaconlist.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Beaconlist.csv; sourceTree = "<group>"; };
 		D9EE3DED1AC26B3300EBD1DB /* N_COCOPARK_B1.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; path = N_COCOPARK_B1.mbtiles; sourceTree = "<group>"; };
 		D9EE3DEE1AC26B3300EBD1DB /* N_COCOPARK_L1.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; path = N_COCOPARK_L1.mbtiles; sourceTree = "<group>"; };
 		D9EE3DEF1AC26B3300EBD1DB /* N_COCOPARK_L2.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; path = N_COCOPARK_L2.mbtiles; sourceTree = "<group>"; };
@@ -153,6 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				48F4D0A22A08EB5DCAED2B03 /* libPods.a in Frameworks */,
+				D90451931AF75FF5003E9F59 /* libAprilBeaconSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,6 +194,28 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		D904518A1AF75FF5003E9F59 /* AprilSDK */ = {
+			isa = PBXGroup;
+			children = (
+				D904518B1AF75FF5003E9F59 /* Headers */,
+				D90451921AF75FF5003E9F59 /* libAprilBeaconSDK.a */,
+			);
+			path = AprilSDK;
+			sourceTree = "<group>";
+		};
+		D904518B1AF75FF5003E9F59 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				D904518C1AF75FF5003E9F59 /* ABBeacon.h */,
+				D904518D1AF75FF5003E9F59 /* ABBeaconManager.h */,
+				D904518E1AF75FF5003E9F59 /* ABBeaconRegion.h */,
+				D904518F1AF75FF5003E9F59 /* ABError.h */,
+				D90451901AF75FF5003E9F59 /* ABSensor.h */,
+				D90451911AF75FF5003E9F59 /* AprilBeaconSDK.h */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
 		D9A5FAD11A31B2A4002FAA64 = {
 			isa = PBXGroup;
 			children = (
@@ -206,16 +239,17 @@
 		D9A5FADC1A31B2A4002FAA64 /* BeaconTool */ = {
 			isa = PBXGroup;
 			children = (
+				D904518A1AF75FF5003E9F59 /* AprilSDK */,
 				D9C94C101A36E34000100A3E /* picture */,
 				D9C94C0E1A35A18300100A3E /* beaconDB */,
 				D9C94BBA1A3552BA00100A3E /* Map */,
 				D9A5FADF1A31B2A4002FAA64 /* AppDelegate.swift */,
 				D9A5FAE11A31B2A4002FAA64 /* BTMapViewController.swift */,
 				D9CA306C1A331CB9007213C4 /* BTSettingViewController.swift */,
-				D9CFED631A58F549001D7100 /* BTQrViewcontroller.swift */,
 				D96ECE3B1A32DA5200BF9677 /* BTTabbarController.swift */,
 				D9B2234A1A4D06AB00B17F00 /* BTDataBaseViewController.swift */,
 				D9A5FAFF1A31B354002FAA64 /* BTDataModel.swift */,
+				D9882DCE1AF9BFD10088D6E8 /* BTModeifyBeaconTool.swift */,
 				D9C94C151A38309600100A3E /* BTAnnotation.swift */,
 				D9F475A11A329AD200ACADE2 /* BTExpansionModel.swift */,
 				D9C94C0C1A356AF300100A3E /* BTSwitchMallView.swift */,
@@ -303,6 +337,7 @@
 		D9C94C101A36E34000100A3E /* picture */ = {
 			isa = PBXGroup;
 			children = (
+				D9E00E761B01EAE100967278 /* Beaconlist.csv */,
 				D9C94C131A36E82600100A3E /* home_bg960.jpg */,
 				D9CAE85A1A52A7CC0053E758 /* bg_inner.jpg */,
 				D9C94C111A36E35000100A3E /* home_bg1136.jpg */,
@@ -404,6 +439,7 @@
 				D9EE3E2E1AC26B3300EBD1DB /* N_KKMALL_L2.mbtiles in Resources */,
 				D9C94C141A36E82600100A3E /* home_bg960.jpg in Resources */,
 				D9EE3E291AC26B3300EBD1DB /* N_JINGJIBAINA_L3.mbtiles in Resources */,
+				D9E00E771B01EAE100967278 /* Beaconlist.csv in Resources */,
 				D9EE3E181AC26B3300EBD1DB /* N_COCOPARK_L1.mbtiles in Resources */,
 				D9EE3E361AC26B3300EBD1DB /* N_SHENGUOTOU_B1.mbtiles in Resources */,
 				D9EE3E311AC26B3300EBD1DB /* N_KKMALL_PARK-2.mbtiles in Resources */,
@@ -490,11 +526,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9A5FAE21A31B2A4002FAA64 /* BTMapViewController.swift in Sources */,
-				D9CFED641A58F549001D7100 /* BTQrViewcontroller.swift in Sources */,
 				D9CA306D1A331CB9007213C4 /* BTSettingViewController.swift in Sources */,
 				D9F475A21A329AD200ACADE2 /* BTExpansionModel.swift in Sources */,
 				D9B2234B1A4D06AC00B17F00 /* BTDataBaseViewController.swift in Sources */,
 				D96ECE3C1A32DA5200BF9677 /* BTTabbarController.swift in Sources */,
+				D9882DCF1AF9BFD10088D6E8 /* BTModeifyBeaconTool.swift in Sources */,
 				D9A5FB001A31B354002FAA64 /* BTDataModel.swift in Sources */,
 				D9A5FAE01A31B2A4002FAA64 /* AppDelegate.swift in Sources */,
 				D9C94C161A38309600100A3E /* BTAnnotation.swift in Sources */,
@@ -607,6 +643,10 @@
 				INFOPLIST_FILE = BeaconTool/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BeaconTool/AprilSDK",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PRODUCT_NAME:rfc1034identifier)/Bridging-Header.h";
 			};
@@ -621,6 +661,10 @@
 				INFOPLIST_FILE = BeaconTool/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BeaconTool/AprilSDK",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PRODUCT_NAME:rfc1034identifier)/Bridging-Header.h";
 			};

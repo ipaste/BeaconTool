@@ -22,9 +22,9 @@ class BTBeaconAnnotation:RMAnnotation {
         self.beacon = beacon;
         self.tmpLayer = RMMarker(detectedBeacon: beacon);
     }
-    func changeAsMark(distance:NSNumber!){
+    func changeAsMark(distance:NSNumber!,color:UIColor!){
         self.detectedState = true;
-        self.tmpLayer?.updateLayer(true, changeDistance: distance);
+        self.tmpLayer?.updateLayer(color, changeDistance: distance);
     }
     
 }
