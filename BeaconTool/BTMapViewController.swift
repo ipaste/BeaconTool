@@ -199,7 +199,13 @@ class BTMapViewController: UIViewController,BTSwitchMallDataSource,BTSwitchMallD
                 var distance:NSNumber = distances[index] as! NSNumber;
                 for annotation in self.mapView!.annotations {
                     if ((annotation as! BTBeaconAnnotation).title == beacon.name){
-                        (annotation as! BTBeaconAnnotation).changeAsMark(distance, color: UIColor.greenColor());
+                        var beaconName:String? = nil;
+                        var results =  modifyDB.executeQuery("select major,minor from Beacon where comment = ?", withArgumentsInArray: [beacon.name]);
+                        if (results.next()){
+                            beaconName = results.stringForColumn("major") + "-" + results.stringForColumn("minor");
+                        }
+                        
+                        (annotation as! BTBeaconAnnotation).changeAsMark(distance, color: UIColor.greenColor() ,modefiyName: beaconName);
                     }
                 }
             }
@@ -235,7 +241,7 @@ class BTMapViewController: UIViewController,BTSwitchMallDataSource,BTSwitchMallD
         var identifier = "\(beacon.major)-\(beacon.minor)";
         for annotation in self.mapView!.annotations {
             if ((annotation as! BTBeaconAnnotation).title == identifier){
-                (annotation as! BTBeaconAnnotation).changeAsMark(beacon.distance, color: UIColor.orangeColor());
+                (annotation as! BTBeaconAnnotation).changeAsMark(beacon.distance, color: UIColor.orangeColor(),modefiyName : nil);
             }
         }
     }

@@ -87,6 +87,7 @@ extension RMMarker {
         textLayer.frame = CGRectMake(0, 0, textSize.width, textSize.height * 2);
         textLayer.foregroundColor = UIColor.redColor().CGColor;
         textLayer.string = "\(beacon.major)\n\(beacon.minor)\n";
+        textLayer.name = "beaconName";
         textLayer.fontSize = 10;
         textLayer.alignmentMode = kCAAlignmentCenter;
         textLayer.anchorPoint = CGPointMake(0.5, 0);
@@ -104,7 +105,7 @@ extension RMMarker {
         
     }
     
-    func updateLayer(changeColor:UIColor?,changeDistance:NSNumber?){
+    func updateLayer(changeColor:UIColor?,changeDistance:NSNumber?,beaconIdentify:String?){
         for sublayer in self.sublayers {
             if ((sublayer as! CATextLayer).name != nil && (sublayer as! CATextLayer).name == "distance"){
                 if(changeDistance != nil){
@@ -113,6 +114,11 @@ extension RMMarker {
                 }
             }
            
+            if (beaconIdentify != nil && sublayer.name == "beaconName"){
+                var major = beaconIdentify?.componentsSeparatedByString("-")[0];
+                var minor = beaconIdentify?.componentsSeparatedByString("-")[1];
+                 (sublayer as! CATextLayer).string = "\(major)\n\(minor)\n";
+            }
             (sublayer as! CATextLayer).foregroundColor = UIColor.greenColor().CGColor;
             self.backgroundColor = changeColor!.CGColor;
         }

@@ -148,7 +148,7 @@ class BTBeacon: NSObject {
         }
     }
     
-    
+ 
     private var tmpMinor:NSInteger?;
     private var tmpMajor:NSInteger?;
     private var tmpLatitude:Double?;

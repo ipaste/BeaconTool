@@ -159,6 +159,12 @@ class BTModeifyBeaconTool: NSObject,ABBeaconDelegate,ABBeaconManagerDelegate {
             beacon.connectToBeacon(ABConnectedReadState.StatedAllInfo);
         }else{
             self.getBeaconList.removeAllObjects();
+            
+            self.beaconManager.stopAprilBeaconDiscovery();
+            self.beaconManager.delegate = nil;
+            self.beaconManager = ABBeaconManager();
+            self.beaconManager.delegate = self;  
+            self.beaconManager.startAprilBeaconsDiscovery();
         }
     }
 }
